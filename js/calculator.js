@@ -70,3 +70,15 @@ equals.addEventListener("click", function () {
     rightDisplay.setAttribute("value","");
     middleDisplay.setAttribute("value","");
 })
+
+
+    clear.addEventListener("click", function () {
+
+        console.log(clear);
+        leftDisplay.setAttribute("value", "");
+        rightDisplay.setAttribute("value", "");
+        middleDisplay.setAttribute("value", "");
+
+    })
+
+
