@@ -1,6 +1,6 @@
 // function name(calculator) {
 
-var numberBtns = document.getElementsByClassName("number").readOnly = true;
+var numberBtns = document.getElementsByClassName("number");
 var operatorBtns = document.getElementsByClassName("operator");
 var clear = document.getElementById("clear");
 var equals = document.getElementById("equals");
@@ -46,9 +46,9 @@ for (var i = 0; i < operatorBtns.length; i++) {
     });
 }
 equals.addEventListener("click", function () {
-    var leftValue = parseInt(leftDisplay.getAttribute("value"));
+    var leftValue = parseFloat(leftDisplay.getAttribute("value"));
     var operator = middleDisplay.getAttribute("value");
-    var rightValue =  parseInt(rightDisplay.getAttribute("value"))
+    var rightValue =  parseFloat(rightDisplay.getAttribute("value"))
     var total;
 
     switch (operator){
@@ -64,9 +64,6 @@ equals.addEventListener("click", function () {
         case "X":
             total = leftValue * rightValue;
             break;
-        case ".":
-            total = leftValue * rightValue;
-            break
     }
     leftDisplay.setAttribute("value", total);
     rightDisplay.setAttribute("value","");
