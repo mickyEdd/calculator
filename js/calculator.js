@@ -64,15 +64,19 @@ equals.addEventListener("click", function () {
         case "X":
             total = leftValue * rightValue;
             break;
+        case "%":
+            total = leftValue * rightValue;
+            break;
+        case "^":
+            total = leftValue * rightValue;
+            break;
     }
-    console.log(total);
     leftDisplay.setAttribute("value", total);
     rightDisplay.setAttribute("value","");
     middleDisplay.setAttribute("value","");
 })
 
-
-    clear.addEventListener("click", function () {
+clear.addEventListener("click", function () {
 
         console.log(clear);
         leftDisplay.setAttribute("value", "");
@@ -80,5 +84,6 @@ equals.addEventListener("click", function () {
         middleDisplay.setAttribute("value", "");
 
     })
+
 
 
