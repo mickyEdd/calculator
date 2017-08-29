@@ -1,11 +1,11 @@
 // function name(calculator) {
 
-var numberBtns = document.getElementsByClassName("number");
+var numberBtns = document.getElementsByClassName("number").readOnly = true;
 var operatorBtns = document.getElementsByClassName("operator");
 var clear = document.getElementById("clear");
 var equals = document.getElementById("equals");
 
-var leftDisplay = document.getElementById("num1");
+var leftDisplay = document.getElementById("num1")
 var middleDisplay = document.getElementById("op");
 var rightDisplay = document.getElementById("num2");
 console.log(numberBtns);
@@ -64,12 +64,9 @@ equals.addEventListener("click", function () {
         case "X":
             total = leftValue * rightValue;
             break;
-        case "%":
+        case ".":
             total = leftValue * rightValue;
-            break;
-        case "^":
-            total = leftValue * rightValue;
-            break;
+            break
     }
     leftDisplay.setAttribute("value", total);
     rightDisplay.setAttribute("value","");
@@ -84,6 +81,14 @@ clear.addEventListener("click", function () {
         middleDisplay.setAttribute("value", "");
 
     })
+inputText.addEventListener("readOnly", function () {
+
+    console.log(inputText);
+    leftDisplay.setAttribute("readOnly", "");
+    rightDisplay.setAttribute("readOnly", "");
+    middleDisplay.setAttribute("readOnly", "");
+
+})
 
 
 
