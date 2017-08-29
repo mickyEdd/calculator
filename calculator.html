@@ -27,17 +27,15 @@
            font-size: 20px;
            border: 1px solid black;
            font-family: alarm-clock;
-
        }
-
-    #calc-contain{
-    position: relative;
-    width: 300px;
-    height: 400px;
-    border: 1px solid black;
-    background: lightgreen;
-    margin: 150px auto;
-    border-radius: 30px;
+       #calc-contain{
+        position: relative;
+        width: 300px;
+        height: 400px;
+        border: 1px solid black;
+        background: dimgray;
+        margin: 150px auto;
+        border-radius: 30px;
 
     }
   input[type=button]{
@@ -49,6 +47,19 @@
       font-size: 20px;
       border-radius: 10px;
   }
+        #clear{
+            background-color: darkorange;
+        }
+        .operator{
+            background-color: darkorange;
+
+        }
+        #equals{
+            background-color: darkorange;
+        }
+        .number{
+            background-color: #FF39EB;
+        }
 
     </style>
 </head>
@@ -85,8 +96,8 @@
         <br>
 
         <input type="button" value="0" class="btn number">
-        <input type="button" value="( )" class="btn number">
-        <input type="button" value="." class="btn number">
+        <input type="button" value="( )" class="btn operator">
+        <input type="button" value="." class="btn operator">
         <input type="button" value="=" class="btn" id="equals">
         <br>
 
